@@ -1,21 +1,39 @@
-import React, { useState } from 'react';
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import React from 'react';
+import { useForm } from 'react-hook-form';
+import { toast } from 'react-hot-toast';
+
+import api from '@/lib/api';
+
 // import { useHistory } from "react-router-dom";
 
 export default function LoginPenjualPage() {
-  // const history = useHistory();
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
 
-  const handleLogin = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    // your login authentication code here
-    // history.push("/dashboard");
-  };
+  const methods = useForm();
+
+  const {handleSubmit, register} = methods;
+  
+
+  const onSubmit = (data: any) => {
+   toast.promise(
+      api.post('/login/penjual', data),
+      {
+        loading: 'Loading...',
+        success: (res) => {
+          localStorage.setItem('token', res.data.token);
+          return 'Login success!';
+        },
+        error: (err) => {
+          return err.response.data.message;
+        },
+      },
+   )
+  }
 
   return (
     <div className='flex justify-center items-center h-screen bg-gray-100'>
       <form
-        onSubmit={handleLogin}
+        onSubmit={handleSubmit(onSubmit)}
         className='bg-white p-8 rounded-md shadow-md'
       >
         <h2 className='text-2xl font-bold mb-4 text-center'>LOGIN PENJUAL</h2>
@@ -25,11 +43,9 @@ export default function LoginPenjualPage() {
           </label>
           <input
             className='appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
-            id='email'
+            {...register('email')}
             type='email'
             placeholder='Email'
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
           />
         </div>
         <div className='mb-6'>
@@ -41,11 +57,9 @@ export default function LoginPenjualPage() {
           </label>
           <input
             className='appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
-            id='password'
+            {...register('password')}
             type='password'
             placeholder='Password'
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
           />
         </div>
         <button

@@ -1,18 +1,45 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React from 'react';
 // import { useHistory } from "react-router-dom";
+import { useForm } from 'react-hook-form';
+import { toast } from 'react-hot-toast';
 
-export default function SignupPenjualPage() {
+import api from '@/lib/api';
+
+export default function SignUpPenjualPage() {
+  const methods = useForm();
+
+  const {handleSubmit, register} = methods;
+
+  const onSubmit = (data: any) => {
+    toast.promise(
+       api.post('/user_penjual/create', data),
+       {
+         loading: 'Loading...',
+         success: () => {
+           return 'Sign Up success!';
+          },
+         error: (err) => {
+           return err.response.data.message;
+         },
+       },
+    )
+   }
+
   return (
     <div className='flex justify-center items-center h-screen bg-gray-100'>
-      <form className='bg-white p-8 rounded-md shadow-md'>
-        <h2 className='text-2xl font-bold mb-4 text-center'>Sign Up Penjual</h2>
+      <form
+        onSubmit={handleSubmit(onSubmit)}
+        className='bg-white p-8 rounded-md shadow-md'
+      >
+        <h2 className='text-2xl font-bold mb-4 text-center'>Sign Up Pe</h2>
         <div className='mb-4'>
           <label className='block text-gray-700 font-bold mb-2' htmlFor='email'>
             Email
           </label>
           <input
             className='appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
-            id='email'
+            {...register('email')}
             type='email'
             placeholder='Email'
             // value={email}
@@ -22,13 +49,13 @@ export default function SignupPenjualPage() {
         <div className='mb-4'>
           <label
             className='block text-gray-700 font-bold mb-2'
-            htmlFor='username'
+            htmlFor='user_name'
           >
             Username
           </label>
           <input
             className='appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
-            id='username'
+            {...register('user_name')}
             type='text'
             placeholder='Username'
             // value={username}
@@ -44,7 +71,7 @@ export default function SignupPenjualPage() {
           </label>
           <input
             className='appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
-            id='password'
+            {...register('password')}
             type='password'
             placeholder='Password'
             // value={password}
@@ -57,7 +84,7 @@ export default function SignupPenjualPage() {
           </label>
           <input
             className='appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
-            id='name'
+            {...register('name')}
             type='text'
             placeholder='Name'
             // value={name}
@@ -70,7 +97,7 @@ export default function SignupPenjualPage() {
           </label>
           <input
             className='appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
-            id='phone'
+            {...register('phone_number')}
             type='tel'
             placeholder='Phone Number'
             // value={phone}
