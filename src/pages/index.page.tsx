@@ -13,7 +13,7 @@ export default function Home() {
                 href='/'
                 className='text-gray-800 text-xl font-bold md:text-2xl hover:text-gray-700'
               >
-                My Website
+                NUSANTARA STORE
               </a>
             </div>
 
@@ -59,17 +59,10 @@ export default function Home() {
         </div>
       </nav>
 
-      <div className='container mx-auto px-6'>
-        <h1 className='text-4xl font-bold text-center text-gray-800 my-12'>
-          Welcome to My Website
+      <div className='container mx-auto px-6 flex justify-center items-center h-full'>
+        <h1 className='text-4xl font-bold text-center text-gray-800'>
+          Selamat Datang di Nusantara Store
         </h1>
-        <p className='text-center text-gray-600 mb-8'>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-          euismod metus vitae velit malesuada tincidunt. Quisque eu lorem
-          pharetra, posuere velit ut, laoreet lorem. Morbi vestibulum nunc id
-          metus tristique tincidunt. Donec euismod mi id sem auctor, vel rhoncus
-          enim fringilla.
-        </p>
       </div>
     </div>
   );

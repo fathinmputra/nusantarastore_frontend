@@ -6,7 +6,7 @@ const config: DefaultSeoProps = {
   openGraph: {
     type: 'website',
     locale: 'en_IE',
-    url: 'https://www.robbypambudi.com/',
+    url: 'https://www.nusantarastore.com/',
     siteName: 'SiteName',
   },
   twitter: {
@@ -14,9 +14,9 @@ const config: DefaultSeoProps = {
     site: '@site',
     cardType: 'summary_large_image',
   },
-  titleTemplate: '%s | RobbyPambudi',
+  titleTemplate: '%s | Nusantara Store',
   description: 'this is a description',
-  defaultTitle: 'RobbyPambudi',
+  defaultTitle: 'Nusantara Store',
   additionalLinkTags: [
     {
       rel: 'icon',

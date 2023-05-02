@@ -1,11 +1,11 @@
 import React from 'react';
 // import { useHistory } from "react-router-dom";
 
-export default function SignupPage() {
+export default function SignupPenjualPage() {
   return (
     <div className='flex justify-center items-center h-screen bg-gray-100'>
       <form className='bg-white p-8 rounded-md shadow-md'>
-        <h2 className='text-2xl font-bold mb-4 text-center'>Sign Up</h2>
+        <h2 className='text-2xl font-bold mb-4 text-center'>Sign Up Penjual</h2>
         <div className='mb-4'>
           <label className='block text-gray-700 font-bold mb-2' htmlFor='email'>
             Email

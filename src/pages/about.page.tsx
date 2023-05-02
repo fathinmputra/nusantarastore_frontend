@@ -1,8 +1,10 @@
+import 'tailwindcss/tailwind.css';
+
 import React from 'react';
 
-const ExamplePage = () => {
+export default function About() {
   return (
-    <div>
+    <div className='bg-gray-100 h-screen'>
       <nav className='bg-white shadow-lg'>
         <div className='container mx-auto px-6 py-3 md:flex md:justify-between md:items-center'>
           <div className='flex items-center justify-between'>
@@ -33,10 +35,6 @@ const ExamplePage = () => {
           </div>
 
           <div className='md:flex items-center'>
-            <div className='flex flex-col md:flex-row md:mx-6'></div>
-          </div>
-
-          <div className='md:flex items-center'>
             <div className='flex flex-col md:flex-row md:mx-6'>
               <a
                 href='/'
@@ -48,30 +46,22 @@ const ExamplePage = () => {
           </div>
         </div>
       </nav>
-      <div className='flex flex-wrap -mx-4'>
-        <div className='w-full md:w-1/2 p-4'>
-          <div className='bg-white rounded-lg shadow-lg p-6'>
-            <h2 className='text-2xl font-bold mb-4'>Pembeli</h2>
-            <a href='/login/pembeli' target='_blank' rel='noopener noreferrer'>
-              <button className='bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded'>
-                Halaman Log In Pembeli
-              </button>
-            </a>
-          </div>
-        </div>
-        <div className='w-full md:w-1/2 p-4'>
-          <div className='bg-white rounded-lg shadow-lg p-6'>
-            <h2 className='text-2xl font-bold mb-4'>Penjual</h2>
-            <a href='/login/penjual' target='_blank' rel='noopener noreferrer'>
-              <button className='bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded'>
-                Halaman Log In Penjual
-              </button>
-            </a>
-          </div>
-        </div>
+
+      <div className='container mx-auto px-6'>
+        <h1 className='text-4xl font-bold text-center text-gray-800 my-12'>
+          Tentang Nusantara Store
+        </h1>
+        <p className='text-center text-gray-600 mb-8'>
+          NusantaraStore adalah platform E-Commerce yang mempertemukan pengrajin
+          dan produsen lokal dengan pelanggan baru. Dengan berbagai macam produk
+          unggulan dari seluruh Nusantara, kami berupaya meningkatkan
+          kesejahteraan para pengrajin dan produsen lokal di Indonesia melalui
+          digitalisasi dan mempromosikan produk-produk mereka ke seluruh negeri.
+          Kami hadir untuk memberikan pengalaman belanja yang menyenangkan,
+          mudah, dan aman bagi para pelanggan kami. Bergabunglah dengan
+          NusantaraStore dan dukung produk-produk lokal Indonesia.
+        </p>
       </div>
     </div>
   );
-};
-
-export default ExamplePage;
+}
