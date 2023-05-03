@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { toast } from 'react-hot-toast';
@@ -13,7 +14,7 @@ export default function LoginPembeliPage() {
   const {handleSubmit, register} = methods;
   
 
-  const onSubmit = (data) => {
+  const onSubmit = (data: any) => {
    toast.promise(
       api.post('/login/pembeli', data),
       {
@@ -30,7 +31,58 @@ export default function LoginPembeliPage() {
   }
 
   return (
-    <div className='flex justify-center items-center h-screen bg-gray-100'>
+    <div className="bg-white">
+      <nav className='bg-white shadow-lg'>
+        <div className='container mx-auto px-6 py-3 md:flex md:justify-between md:items-center'>
+          <div className='flex items-center justify-between'>
+            <div>
+              <a
+                href='/'
+                className='text-gray-800 text-xl font-bold md:text-2xl hover:text-gray-700'
+              >
+                NUSANTARA STORE
+              </a>
+            </div>
+
+            <div className='flex md:hidden'>
+              <button
+                type='button'
+                className='text-gray-500 hover:text-gray-600 focus:outline-none focus:text-gray-600'
+                aria-label='toggle menu'
+              >
+                <svg viewBox='0 0 24 24' className='h-6 w-6 fill-current'>
+                  <path
+                    fillRule='evenodd'
+                    clipRule='evenodd'
+                    d='M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z'
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div className='md:flex items-center'>
+            <div className='flex flex-col md:flex-row md:mx-6'></div>
+          </div>
+
+          <div className='md:flex items-center'>
+            <div className='flex flex-col md:flex-row md:mx-6'>
+              <a
+                href='/'
+                className='my-1 text-gray-700 hover:text-indigo-500 md:mx-4 md:my-0'
+              >
+                Kembali
+              </a>
+              <a
+                href='/produk'
+                className='my-1 text-gray-700 hover:text-indigo-500 md:mx-4 md:my-0'
+              >
+                Akun
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
       <form
         onSubmit={handleSubmit(onSubmit)}
         className='bg-white p-8 rounded-md shadow-md'
