@@ -122,10 +122,16 @@ const ProductDetail = () => {
                 Tambah Produk
               </a>
               <a
-                href='/profil'
+                href='/profilpenjual'
                 className='my-1 text-gray-700 hover:text-indigo-500 md:mx-4 md:my-0'
               >
                 Profil Pengguna
+              </a>
+              <a
+                href='/'
+                className='my-1 text-gray-700 hover:text-indigo-500 md:mx-4 md:my-0'
+              >
+                Logout
               </a>
             </div>
           </div>

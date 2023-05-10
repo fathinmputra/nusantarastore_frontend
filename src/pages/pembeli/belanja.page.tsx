@@ -116,16 +116,22 @@ const ProductDetail = () => {
           <div className='md:flex items-center'>
             <div className='flex flex-col md:flex-row md:mx-6'>
             <a
-                href='/belanja'
+                href='/produkpembeli'
                 className='my-1 text-gray-700 hover:text-indigo-500 md:mx-4 md:my-0'
               >
-                Belanja
+                Kembali
               </a>
               <a
-                href='/profil'
+                href='/profilpembeli'
                 className='my-1 text-gray-700 hover:text-indigo-500 md:mx-4 md:my-0'
               >
                 Profil Pengguna
+              </a>
+              <a
+                href='/'
+                className='my-1 text-gray-700 hover:text-indigo-500 md:mx-4 md:my-0'
+              >
+                Logout
               </a>
             </div>
           </div>
@@ -141,14 +147,21 @@ const ProductDetail = () => {
   price={product.price}
 />
 
-            <div className="flex justify-center mt-4">
-              <button
-                className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-                onClick={() => showProductDetails(product)}
-              >
-                Detail Produk
-              </button>
-            </div>
+<div className="flex justify-center mt-4">
+  <button
+    className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+    onClick={() => showProductDetails(product)}
+  >
+    Detail Produk
+  </button>
+  <button
+    className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded ml-4"
+    // onClick={() => addToCart(product)}
+  >
+    Tambahkan ke Keranjang
+  </button>
+</div>
+
           </div>
         ))}
       </div>

@@ -1,10 +1,11 @@
 import React from 'react';
 
 export default function Home() {
-  const email = 'johndoe@example.com';
-  const username = 'johndoe';
-  const name = 'John Doe';
+  const email = 'fathinmp11@gmail.com';
+  const username = 'fathinmp';
+  const name = 'Fathin Muhashibi Putra';
   const phoneNumber = '081234567890';
+  const address = 'Jl. Keputih Tegal Timur I No.101';
 
   return (
     <div className="bg-white">
@@ -44,7 +45,7 @@ export default function Home() {
           <div className='md:flex items-center'>
             <div className='flex flex-col md:flex-row md:mx-6'>
               <a
-                href='/produkpenjual'
+                href='/produkpembeli'
                 className='my-1 text-gray-700 hover:text-indigo-500 md:mx-4 md:my-0'
               >
                 Kembali
@@ -57,7 +58,7 @@ export default function Home() {
         <div className="text-center">
           <img
             className="w-20 h-20 rounded-full mx-auto"
-            src="https://source.unsplash.com/random"
+            src="/fathin.jpg"
             alt="User avatar"
           />
           <h2 className="text-xl font-bold mt-2">{name}</h2>
@@ -69,6 +70,8 @@ export default function Home() {
           <div>{email}</div>
           <div className="text-sm font-medium text-gray-500">Phone:</div>
           <div>{phoneNumber}</div>
+          <div className="text-sm font-medium text-gray-500">Address:</div>
+          <div>{address}</div>
         </div>
       </div>
     </div>
