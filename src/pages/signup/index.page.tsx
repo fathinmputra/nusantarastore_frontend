@@ -52,7 +52,7 @@ const ExamplePage = () => {
         <div className='w-full md:w-1/2 p-4'>
           <div className='bg-white rounded-lg shadow-lg p-6'>
             <h2 className='text-2xl font-bold mb-4'>Pembeli</h2>
-            <a href='/signup/pembeli' target='_blank' rel='noopener noreferrer'>
+            <a href='/signup/pembeli' rel='noopener noreferrer'>
               <button className='bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded'>
                 Halaman Sign Up Pembeli
               </button>
@@ -62,7 +62,7 @@ const ExamplePage = () => {
         <div className='w-full md:w-1/2 p-4'>
           <div className='bg-white rounded-lg shadow-lg p-6'>
             <h2 className='text-2xl font-bold mb-4'>Penjual</h2>
-            <a href='/signup/penjual' target='_blank' rel='noopener noreferrer'>
+            <a href='/signup/penjual' rel='noopener noreferrer'>
               <button className='bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded'>
                 Halaman Sign Up Penjual
               </button>

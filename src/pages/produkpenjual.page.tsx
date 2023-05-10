@@ -6,19 +6,19 @@ type Product = {
   id: number;
   name: string;
   image: string;
-  price: number;
+  price: string;
   description: string;
   category: string;
   stock: number;
 };
 
 // Komponen untuk menampilkan gambar, nama, dan harga produk
-const ProductCard = ({ image, name, price }: { image: string; name: string; price: number; }) => (
+const ProductCard = ({ image, name, price }: { image: string; name: string; price: string; }) => (
   <div className="flex flex-col items-center">
     <img src={image} alt={name} className="w-64 h-64 object-cover" />
     <div className="mt-4 text-center">
       <h2 className="text-xl font-bold">{name}</h2>
-      <p className="text-lg font-medium">${price}</p>
+      <p className="text-lg font-medium">{price}</p>
     </div>
   </div>
 );
@@ -29,10 +29,10 @@ const ProductDetails = ({ product }: { product: Product }) => (
     <img src={product.image} alt={product.name} className="w-64 h-64 object-cover" />
     <div className="mt-4 text-center">
       <h2 className="text-xl font-bold">{product.name}</h2>
-      <p className="text-lg font-medium">${product.price}</p>
+      <p className="text-lg font-medium">{product.price}</p>
       <p className="text-base">{product.description}</p>
       <p className="text-base">{product.category}</p>
-      <p className="text-base">{product.stock} in stock</p>
+      <p className="text-base">Stok : {product.stock}</p>
     </div>
   </div>
 );
@@ -41,29 +41,29 @@ const ProductDetails = ({ product }: { product: Product }) => (
 const products: Product[] = [
   {
     id: 1,
-    name: "Product 1",
-    image: "https://via.placeholder.com/400x400",
-    price: 10.99,
-    description: "This is product 1",
-    category: "Category 1",
+    name: "Tas Anyaman",
+    image: "https://cdn-2.tstatic.net/tribunnews/foto/bank/images/istock-ilustrasi-suvenir-produk-lokal-indonesia.jpg",
+    price: "Rp50.000,00",
+    description: "Kerajinan Tas Anyaman adalah produk kerajinan tangan berupa tas yang dibuat dengan teknik anyaman menggunakan bahan-bahan seperti pandan, rotan, atau bambu. Tas anyaman biasanya memiliki tampilan alami dan unik, dan dapat digunakan sebagai aksesori fashion maupun barang sehari-hari.",
+    category: "Aksesoris",
     stock: 10,
   },
   {
     id: 2,
-    name: "Product 2",
-    image: "https://via.placeholder.com/400x400",
-    price: 20.99,
-    description: "This is product 2",
-    category: "Category 2",
+    name: "Kemeja Batik",
+    image: "https://www.hanleebatik.co.id/wp-content/uploads/2021/12/652A.jpg",
+    price: "Rp150.000,00",
+    description: "Kemeja Batik adalah jenis kemeja yang dibuat dengan menggunakan teknik batik pada bahan kain. Batik adalah seni tradisional Indonesia yang menghasilkan pola-pola unik pada kain dengan menggunakan lilin dan pewarna. Kemeja batik umumnya memiliki tampilan elegan dan cocok digunakan pada acara formal maupun informal.",
+    category: "Pakaian",
     stock: 20,
   },
   {
     id: 3,
-    name: "Product 3",
-    image: "https://via.placeholder.com/400x400",
-    price: 30.99,
-    description: "This is product 3",
-    category: "Category 3",
+    name: "Kain Batik",
+    image: "https://e-commerce.kendalbulur.com/wp-content/uploads/2019/11/gambar-kain-batik.jpg",
+    price: "Rp200.000,00",
+    description: "Kain Batik adalah kain yang dihasilkan dari proses batik, dimana pola-pola khas dibuat pada kain dengan menggunakan lilin dan pewarna. Kain batik merupakan kain tradisional Indonesia yang memiliki nilai seni dan budaya yang tinggi, dan sering digunakan untuk keperluan pakaian, dekorasi rumah, atau souvenir.",
+    category: "Tekstil",
     stock: 30,
   },
 ];
@@ -116,10 +116,10 @@ const ProductDetail = () => {
           <div className='md:flex items-center'>
             <div className='flex flex-col md:flex-row md:mx-6'>
             <a
-                href='/belanja'
+                href='/tambahproduk'
                 className='my-1 text-gray-700 hover:text-indigo-500 md:mx-4 md:my-0'
               >
-                Belanja
+                Tambah Produk
               </a>
               <a
                 href='/profil'

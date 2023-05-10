@@ -68,13 +68,13 @@ export default function LoginPembeliPage() {
           <div className='md:flex items-center'>
             <div className='flex flex-col md:flex-row md:mx-6'>
               <a
-                href='/'
+                href='/login'
                 className='my-1 text-gray-700 hover:text-indigo-500 md:mx-4 md:my-0'
               >
                 Kembali
               </a>
               <a
-                href='/produk'
+                href='/produkpembeli'
                 className='my-1 text-gray-700 hover:text-indigo-500 md:mx-4 md:my-0'
               >
                 Akun
