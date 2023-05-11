@@ -22,7 +22,29 @@ Nusantara Store adalah sebuah website E-Commerce yang bertujuan untuk menghubung
 ![nusantara_store_Physical_Export-2023-04-21_02-06](https://user-images.githubusercontent.com/103252800/233463877-9f90a6cc-d5fa-433a-a615-171c1a72d9e5.png)
 
 ## FITUR WEBSITE  
-Website Nusantara Store memiliki fitur-fitu berikut ini :
+Website Nusantara Store memiliki fitur-fitur berikut ini :
+
+A. LANDING PAGE :
+  1. About 
+  2. Sign Up
+   - Halaman Sign Up Pembeli
+   - Halaman Sign Up Penjual
+  4. Log In
+   - Halaman Log In Pembeli (Autentikasi email pengguna)
+   - Halaman Log In Penjual (Autentikasi email pengguna)
+
+B. DASHBOARD AKUN PENJUAL
+  1. Tambah Produk ( CRUD Produk dan kategori)
+  2. Profil Pengguna
+  3. Logout
+
+C. DASHBOARD AKUN PEMBELI
+  1. Belanja (CRUD barang yang akan dibeli)
+  2. Profil Pengguna
+  3. Logout
+
+
+Penjelasan lebih lanjutnya adalah sebagai berikut :
 
 ### A. LANDING PAGE
 <img width="951" alt="image" src="https://github.com/fathinmputra/nusantarastore_frontend/assets/103252800/b8f6512b-faee-49f7-9f27-1bdd5f1bd4ae">
@@ -39,22 +61,22 @@ Keterangan : Pilihan About digunakan untuk melihat deskripsi tentang website Nus
 
 Keterangan : Pilihan Sign Up digunakan untuk mendaftar akun pengguna.
 
-#### - Halaman Sign Up Pembeli 
-<img width="959" alt="image" src="https://github.com/fathinmputra/nusantarastore_frontend/assets/103252800/75725a19-df4e-441d-9255-9020ffb7edd2">
-
 #### - Halaman Sign Up Penjual <br>
 <img width="960" alt="image" src="https://github.com/fathinmputra/nusantarastore_frontend/assets/103252800/2bc51178-3d13-44aa-92f0-8c3914b40d94">
+
+#### - Halaman Sign Up Pembeli 
+<img width="959" alt="image" src="https://github.com/fathinmputra/nusantarastore_frontend/assets/103252800/75725a19-df4e-441d-9255-9020ffb7edd2">
 
 #### 3. **Log In**
 <img width="960" alt="image" src="https://github.com/fathinmputra/nusantarastore_frontend/assets/103252800/38d549b8-6fc4-4ecf-ac34-d91041096665">
 
 Keterangan : Pilihan Log In digunakan untuk masuk ke akun pengguna.
 
-#### - Halaman Log In Pembeli 
-<img width="960" alt="image" src="https://github.com/fathinmputra/nusantarastore_frontend/assets/103252800/29abaa5d-e3b2-464b-a4e4-915893c04046">
-
 #### - Halaman Log In Penjual 
 <img width="960" alt="image" src="https://github.com/fathinmputra/nusantarastore_frontend/assets/103252800/d24c196a-4af7-4ddf-9755-f23519a01a92">
+
+#### - Halaman Log In Pembeli 
+<img width="960" alt="image" src="https://github.com/fathinmputra/nusantarastore_frontend/assets/103252800/29abaa5d-e3b2-464b-a4e4-915893c04046">
 
 
 ### B. DASHBOARD AKUN PENJUAL
@@ -72,12 +94,12 @@ Keterangan : Pilihan Tambah Produk digunakan untuk menambahkan produk yang mau d
 
 Keterangan : Pilihan Profil Pengguna digunakan untuk menampilkan profil dari pengguna akun penjual.
 
-#### 2. **Logout**
+#### 3. **Logout**
 
 Keterangan : Pilihan Logout digunakan untuk keluar akun pengguna.
 
 
-### B. DASHBOARD AKUN PEMBELI
+### C. DASHBOARD AKUN PEMBELI
 <img width="960" alt="image" src="https://github.com/fathinmputra/nusantarastore_frontend/assets/103252800/0f84331a-6357-48fc-a752-879bd3cb0199">
 
 Dashboard Akun Pembeli menampilkan barang-barang yang dapat dibeli dan Navigation Bar yang berisi tombol pilihan Belanja, Profil Pengguna, dan Logout:
@@ -92,7 +114,7 @@ Keterangan : Pilihan Tambah Produk digunakan untuk melakukan belanja (Tambahkan 
 
 Keterangan : Pilihan Profil Pengguna digunakan untuk menampilkan profil dari pengguna akun pembeli.
 
-#### 2. **Logout**
+#### 3. **Logout**
 
 Keterangan : Pilihan Logout digunakan untuk keluar akun pengguna.
 
